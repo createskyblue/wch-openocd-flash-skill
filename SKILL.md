@@ -60,7 +60,7 @@ description: 使用 WCH-LinkE/WCH-Link、MounRiver Studio 2、WCH OpenOCD 给 WC
 优先使用本技能自带脚本：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File C:\Users\lhw\.cc-switch\skills\wch-openocd-flash\scripts\flash-wch-openocd.ps1 -ProjectDir <工程目录>
+powershell -ExecutionPolicy Bypass -File .\scripts\flash-wch-openocd.ps1 -ProjectDir <工程目录>
 ```
 
 可选参数：
