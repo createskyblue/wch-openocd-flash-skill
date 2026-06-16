@@ -1,1 +1,1 @@
-Codex skill for flashing WCH RISC-V firmware with MounRiver Studio 2, WCH OpenOCD, and WCH-LinkE/WCH-Link.
+Codex skill for building, flashing, verifying, resetting, and reading serial logs from WCH RISC-V firmware with MounRiver Studio 2, WCH OpenOCD, and WCH-LinkE/WCH-Link.
