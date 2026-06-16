@@ -15,6 +15,7 @@
 - 调用 MounRiver 自带 `make.exe` 编译工程
 - 使用 WCH OpenOCD 和 `wch-riscv.cfg` 烧录 ELF/HEX
 - 执行 `verify reset exit`
+- 按 `WCH-Link SERIAL` 名称自动查找串口并抓启动日志
 - 烧录失败时保留 OpenOCD 输出，方便定位连接、占用或芯片识别问题
 
 ## 快速使用
@@ -66,6 +67,20 @@ powershell -ExecutionPolicy Bypass -File .\scripts\flash-wch-openocd.ps1 -Projec
 ** Verify Started **
 ** Verified OK **
 ** Resetting Target **
+```
+
+## 读取串口启动日志
+
+默认按 `WCH-Link SERIAL` 名称查找串口，不要固定 `COM15` 这类端口号：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\read-wch-serial-log.ps1 -BaudRate 500000 -Seconds 10
+```
+
+脚本会先打开串口，再通过 OpenOCD 执行 `init/reset/resume/exit`，避免错过上电瞬间日志。若只想读取当前串口数据，不复位目标：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\read-wch-serial-log.ps1 -BaudRate 500000 -Seconds 10 -NoReset
 ```
 
 ## 说明

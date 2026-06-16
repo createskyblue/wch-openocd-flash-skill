@@ -1,4 +1,4 @@
 interface:
   display_name: "WCH OpenOCD 烧录"
-  short_description: "用 MounRiver/WCH-LinkE 编译、烧录并校验 WCH 固件"
-  default_prompt: "帮我用 WCH-LinkE 烧录当前 MounRiver 工程，并确认 verify 是否通过。"
+  short_description: "用 MounRiver/WCH-LinkE 编译、烧录、校验并读取 WCH 串口日志"
+  default_prompt: "帮我用 WCH-LinkE 烧录当前 MounRiver 工程，确认 verify 是否通过，并读取 WCH-Link 串口启动日志。"
